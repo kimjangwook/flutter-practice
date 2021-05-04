@@ -5,6 +5,7 @@ import 'package:flutter_demo/pages/horizontal_list_page.dart';
 import 'package:flutter_demo/pages/image_page.dart';
 import 'package:flutter_demo/pages/list_page.dart';
 import 'package:flutter_demo/pages/next_page.dart';
+import 'package:flutter_demo/pages/provider_page.dart';
 import 'package:flutter_demo/pages/text_page.dart';
 import 'package:flutter_demo/pages/youtube_page.dart';
 
@@ -144,6 +145,19 @@ class MyHomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => YoutubePage(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.model_training),
+            title: Text('중급 - 프로바이더 패턴'),
+            trailing: Icon(Icons.navigate_next),
+            onTap: () async {
+              await Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProviderPage(),
                 ),
               );
             },
